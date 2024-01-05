@@ -15,8 +15,8 @@ CREATE TABLE "campaigns" (
     "currency" VARCHAR(50)   NOT NULL,
     "launch_date" DATE   NOT NULL,
     "end_date" DATE   NOT NULL,
-    "category_id" INTEGER   NOT NULL,
-    "subcategory_id" INTEGER   NOT NULL,
+    "category_id" VARCHAR(20)   NOT NULL,
+    "subcategory_id" VARCHAR(20)   NOT NULL,
     CONSTRAINT "pk_campaigns" PRIMARY KEY (
         "cf_id"
      )
@@ -33,7 +33,7 @@ CREATE TABLE "contacts" (
 );
 
 CREATE TABLE "categories" (
-    "category_id" INTEGER   NOT NULL,
+    "category_id" VARCHAR(20)   NOT NULL,
     "category" VARCHAR(50)   NOT NULL,
     CONSTRAINT "pk_categories" PRIMARY KEY (
         "category_id"
@@ -41,7 +41,7 @@ CREATE TABLE "categories" (
 );
 
 CREATE TABLE "subcategories" (
-    "subcategory_id" INTEGER   NOT NULL,
+    "subcategory_id" VARCHAR(20)   NOT NULL,
     "subcategory" VARCHAR(50)   NOT NULL,
     CONSTRAINT "pk_subcategories" PRIMARY KEY (
         "subcategory_id"
